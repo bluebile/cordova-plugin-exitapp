@@ -8,10 +8,6 @@
   <license>Apache 2.0</license>
   <keywords>cordova,terminate</keywords>
 
-  <js-module src="www/ExitApp.js" name="exitApp">
-    <merges target="navigator.app" />
-  </js-module>
-
   <!-- wp8 -->
   <platform name="wp8">
     <config-file target="config.xml" parent="/*">
@@ -19,7 +15,9 @@
         <param name="wp-package" value="ExitApp" />
       </feature>
     </config-file>
-
+    <js-module src="www/ExitApp.js" name="exitApp">
+        <merges target="navigator.app" />
+     </js-module>
     <source-file src="src/wp/ExitApp.cs" />
   </platform>
 </plugin>
